@@ -11,4 +11,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://192.168.1.100:8281', // SUBSTITUA pelo IP do computador onde o backend está rodando
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 })
+
