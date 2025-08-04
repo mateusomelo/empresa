@@ -24437,6 +24437,8 @@ const IN = () => {
 	rj = "/assets/company_profile-I_P_jtLv.png",
 	ij = "/assets/services_section--oyXZzdz.png",
 	Hu = "/assets/clients_section-CiY21EiB.png",
+  Hu1 = "/assets/clients_section-CiY21EiB1.png",
+  Hu2 = "/assets/bestguest.png",
 	oj = "/assets/contact_section-CxFxXeoO.png";
 function sj({ onLoginClick: a }) {
 	return u.jsxs("div", {
@@ -24669,7 +24671,7 @@ function sj({ onLoginClick: a }) {
 										}),
 										u.jsx("h3", {
 											className: "text-xl font-semibold text-white",
-											children: "TechCorp",
+											children: "ED.HYDE PARK",
 										}),
 									],
 								}),
@@ -24677,7 +24679,7 @@ function sj({ onLoginClick: a }) {
 									className: "bg-gray-800 rounded-lg p-6 text-center",
 									children: [
 										u.jsx("img", {
-											src: Hu,
+											src: Hu1,
 											alt: "InovaLabs",
 											className:
 												"w-full h-48 object-cover rounded-lg mb-4",
@@ -24692,36 +24694,18 @@ function sj({ onLoginClick: a }) {
 									className: "bg-gray-800 rounded-lg p-6 text-center",
 									children: [
 										u.jsx("img", {
-											src: Hu,
+											src: Hu2,
 											alt: "DataGuard",
 											className:
 												"w-full h-48 object-cover rounded-lg mb-4",
 										}),
 										u.jsx("h3", {
 											className: "text-xl font-semibold text-white",
-											children: "DataGuard",
+											children: "BEST GUEST HOTEL",
 										}),
 									],
 								}),
 							],
-						}),
-					],
-				}),
-			}),
-			u.jsx("section", {
-				className: "py-20 px-6 bg-gray-900",
-				children: u.jsxs("div", {
-					className: "max-w-4xl mx-auto text-center",
-					children: [
-						u.jsx("blockquote", {
-							className:
-								"text-3xl md:text-4xl font-light text-white mb-8 leading-relaxed",
-							children:
-								'"A tecnologia é a nossa paixão. Cuidaremos dela, para que você possa se concentrar nas suas inovações."',
-						}),
-						u.jsx("cite", {
-							className: "text-lg text-gray-400",
-							children: "— Carlos Silva, CEO",
 						}),
 					],
 				}),
