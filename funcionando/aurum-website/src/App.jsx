@@ -15,9 +15,31 @@ import heroImage from './assets/hero_section.png';
 import companyImage from './assets/company_profile.png';
 import servicesImage from './assets/services_section.png';
 import clientsImage from './assets/clients_section.png';
+import clientsImage1 from './assets/bestguest.png';
+import clientsImage2 from './assets/clients_section-CiY21EiB.png';
 import contactImage from './assets/contact_section.png';
 
 function HomePage({ onLoginClick }) {
+  const clientsData = [
+    { name: "TechCorp", orimage: clientsImage, alt: "TechCorp" },
+    { name: "BestGuestHotel", image: clientsImage1, alt: "InovaLabs" },
+    { name: "DataGuard", image: clientsImage2, alt: "DataGuard" },
+    { name: "TechCorp", orimage: clientsImage, alt: "TechCorp" },
+    { name: "InovaLabs", image: clientsImage1, alt: "InovaLabs" },
+    { name: "DataGuard", image: clientsImage2, alt: "DataGuard" },
+  ];
+
+  const [currentClientIndex, setCurrentClientIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentClientIndex((prevIndex) => 
+        (prevIndex + 1) % clientsData.length
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [clientsData.length]);
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header com botão de login */}
@@ -152,43 +174,15 @@ function HomePage({ onLoginClick }) {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
+            <div className="bg-gray-800 rounded-lg p-6 text-center transition-opacity duration-1000 ease-in-out">
               <img 
-                src={clientsImage} 
-                alt="TechCorp" 
+                src={clientsData[currentClientIndex].image} 
+                alt={clientsData[currentClientIndex].alt} 
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold text-white">TechCorp</h3>
-            </div>
-            
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <img 
-                src={clientsImage} 
-                alt="InovaLabs" 
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold text-white">InovaLabs</h3>
-            </div>
-            
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <img 
-                src={clientsImage} 
-                alt="DataGuard" 
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold text-white">DataGuard</h3>
+              <h3 className="text-xl font-semibold text-white">{clientsData[currentClientIndex].name}</h3>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-20 px-6 bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <blockquote className="text-3xl md:text-4xl font-light text-white mb-8 leading-relaxed">
-            "A tecnologia é a nossa paixão. Cuidaremos dela, para que você possa se concentrar nas suas inovações."
-          </blockquote>
-          <cite className="text-lg text-gray-400">— Carlos Silva, CEO</cite>
         </div>
       </section>
 
