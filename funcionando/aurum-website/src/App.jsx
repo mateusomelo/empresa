@@ -14,19 +14,22 @@ import TicketDetail from './components/TicketDetail';
 import heroImage from './assets/hero_section.png';
 import companyImage from './assets/company_profile.png';
 import servicesImage from './assets/services_section.png';
-import clientsImage from './assets/clients_section.png';
-import clientsImage1 from './assets/bestguest.png';
-import clientsImage2 from './assets/clients_section-CiY21EiB.png';
+import clientsImage1 from './assets/FsMax.jpeg';
+import clientsImage2 from './assets/bestguest.png';
+import clientsImage3 from './assets/edhyde.png';
+import clientsImage4 from './assets/moreirafilho.jpg';
+import clientsImage5 from './assets/spcentro.png';
+import clientsImage6 from './assets/novaesroselli.jpeg';
 import contactImage from './assets/contact_section.png';
 
 function HomePage({ onLoginClick }) {
   const clientsData = [
-    { name: "TechCorp", orimage: clientsImage, alt: "TechCorp" },
-    { name: "BestGuestHotel", image: clientsImage1, alt: "InovaLabs" },
-    { name: "DataGuard", image: clientsImage2, alt: "DataGuard" },
-    { name: "TechCorp", orimage: clientsImage, alt: "TechCorp" },
-    { name: "InovaLabs", image: clientsImage1, alt: "InovaLabs" },
-    { name: "DataGuard", image: clientsImage2, alt: "DataGuard" },
+    { name: "FsMax Systems", image: clientsImage1, alt: "FsMax Systems" },
+    { name: "Best Guest Hotel", image: clientsImage2, alt: "Best Guest Hotel" },
+    { name: "ED.HYDE PARK", image: clientsImage3, alt: "ED.HYDE PARK" },
+    { name: "Moreira Filho Advogados", image: clientsImage4, alt: "Moreira Filho Advogados" },
+    { name: "SP Centro", image: clientsImage5, alt: "SP Centro" },
+    { name: "Novas & Roselli", image: clientsImage6, alt: "Novas Roselli" },
   ];
 
   const [currentClientIndex, setCurrentClientIndex] = useState(0);
